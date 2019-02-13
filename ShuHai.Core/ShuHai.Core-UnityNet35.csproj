@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{55AEDE85-7BCD-431F-A493-4D60CB2B6036}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ShuHai</RootNamespace>
+    <AssemblyName>ShuHai.Core</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
+    <BaseOutputPath>bin\UnityNet35\</BaseOutputPath>
+    <BaseIntermediateOutputPath>obj\UnityNet35\</BaseIntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>$(BaseOutputPath)$(Configuration)\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;UNITY</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>$(BaseOutputPath)$(Configuration)\</OutputPath>
+    <DefineConstants>TRACE;UNITY</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArrayUtil.cs" />
+    <Compile Include="Bitwise\Integer.cs" />
+    <Compile Include="Collections\Deque.cs" />
+    <Compile Include="Collections\OrderedList.cs" />
+    <Compile Include="CompatibleUnityVersionAttribute.cs" />
+    <Compile Include="EqualityComparerFactory.cs" />
+    <Compile Include="Extensions\ArrayExtensions.cs" />
+    <Compile Include="Extensions\CollectionExtensions.cs" />
+    <Compile Include="CollectionUtil.cs" />
+    <Compile Include="Extensions\ComparableExtensions.cs" />
+    <Compile Include="ComparableMath.cs" />
+    <Compile Include="Ensure.cs" />
+    <Compile Include="EnumTraits.cs" />
+    <Compile Include="Extensions\GenericExtensions.cs" />
+    <Compile Include="Generated\MemberTypesExtensions.cs" />
+    <Compile Include="Generated\TypeAttributesExtensions.cs" />
+    <Compile Include="HashCode.cs" />
+    <Compile Include="HistoricalUnityVersions.cs" />
+    <Compile Include="Index.cs" />
+    <Compile Include="Interval.cs" />
+    <Compile Include="Extensions\ObjectExtensions.cs" />
+    <Compile Include="PathUtil.cs" />
+    <Compile Include="Extensions\StringBuilderExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="SequentialEvents\SequentialActions.cs" />
+    <Compile Include="SequentialEvents\SequentialEvent.cs" />
+    <Compile Include="UnityVersion.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
