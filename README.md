@@ -1,4 +1,4 @@
-# ShuHaiFoundation
+# ShuHai Foundation
 
 Foundation libraries for ShuHai (Unity) projects.
 

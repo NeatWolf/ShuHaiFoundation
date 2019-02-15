@@ -17,7 +17,7 @@ namespace ShuHai.Unity.PackageSetup
             if (Instance)
                 return;
 
-            var path = AssetPaths.Generated + "/" + typeof(ArchiveInstaller).Name + ".asset";
+            var path = AssetPaths.Generated + "/Editor/" + typeof(ArchiveInstaller).Name + ".asset";
             Instance = AssetDatabase.LoadAssetAtPath<ArchiveInstaller>(path);
 
             if (Instance == null)
